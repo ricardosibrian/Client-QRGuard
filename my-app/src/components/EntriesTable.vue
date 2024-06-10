@@ -44,9 +44,11 @@ export default {
       searchQuery: '',
       dropdownVisible: false,
       entries: [
-        { id: 1, date: '02/03/2023 15:30:00', visitor: 'Carlos García', email: 'john.doe@gmail.com', entryType: 'Entrada única' },
-        { id: 2, date: '02/03/2023 15:30:00', visitor: 'Carlos García', email: 'ricardo.lopez@gmail.com', entryType: 'Entrada única' },
-        { id: 3, date: '02/03/2023 15:30:00', visitor: 'Carlos García', email: 'fernando.eguzizabal@gmail.com', entryType: 'Entrada única' },
+        { id: 1, date: '02/03/2023 16:17:02', visitor: 'Carlos García', email: 'john.doe@gmail.com', entryType: 'Entrada única' },
+        { id: 2, date: '02/03/2023 07:57:43', visitor: 'Mario Valencia', email: 'ricardo.lopez@gmail.com', entryType: 'Entrada múltiple' },
+        { id: 3, date: '02/03/2023 15:02:20', visitor: 'Dennis Villalta', email: 'dennis.villalta@gmail.com', entryType: 'Entrada única' },
+        { id: 4, date: '02/03/2023 19:32:17', visitor: 'Carlos García', email: 'john.doe@gmail.com', entryType: 'Entrada única' },
+        { id: 5, date: '03/03/2023 09:15:30', visitor: 'Ana Rodríguez', email: 'ana.rodriguez@gmail.com', entryType: 'Entrada múltiple' },
       ],
     };
   },
