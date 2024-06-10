@@ -1,12 +1,13 @@
 <template>
   <div class="table-container">
     <div class="table-header">
-      <h3>Miembros</h3>
+      <h3>Miembros de mi hogar</h3>
       <button class="add-button" @click="addMember">
          Añadir
       </button>
     </div>
-    <table class="table">
+    <div class="table-wrapper">
+      <table class="table">
       <thead>
         <tr>
           <th>Nombre</th>
@@ -24,6 +25,7 @@
         </tr>
       </tbody>
     </table>
+    </div>
   </div>
 </template>
 
@@ -48,12 +50,19 @@ export default {
 </script>
 
 <style scoped>
+@import url('../styles.css');
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
 .table-container {
   margin-top: 20px;
   background-color: var(--white-color);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 20px;
+  overflow-x: auto;
 }
 
 .table-header {
@@ -65,11 +74,14 @@ export default {
 
 .add-button {
   background-color: var(--primary-color);
-  color: var(--white-color);
+  color: white;
+  font-size: 14px;
+  font-family: var(--primary-font);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: 600;
   display: flex;
   align-items: center;
 }
@@ -85,21 +97,31 @@ export default {
 .table {
   width: 100%;
   border-collapse: collapse;
+  color: var(--title-color);
+  font-family: var(--primary-font);
 }
 
 .table th, .table td {
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+  
 }
 
 .table th {
-  background-color: var(--primary-color);
-  color: var(--white-color);
+  background-color: #f9f9f9;
+  font-size: 14px;
 }
 
 .table td {
   background-color: var(--white-color);
+  font-size: 13px;
+}
+
+.table-header h3{
+  color: var(--title-color);
+  font-size: 18px;
+  font-family: var(--primary-font);
 }
 
 .delete-button {
@@ -112,7 +134,7 @@ export default {
 }
 
 .delete-button:hover {
-  background-color: #f0f0f0;  
+  background-color: #E0E1E5;  
 }
 </style>
 

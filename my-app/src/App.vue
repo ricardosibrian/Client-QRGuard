@@ -1,22 +1,16 @@
 <template>
-  <AsideBar></AsideBar>
-  <div class="container">
-    <TopBar class="topbar"></TopBar>
-    <div class="router">
-      <router-view></router-view>
-    </div>
+  <div id="app">
+    <RouterView></RouterView>
   </div>
 </template>
 
 <script>
-import AsideBar from './components/AsideBar.vue'
-import TopBar from './components/TopBar.vue'
+import Login from './views/LoginView.vue'
 
 export default {
   name: 'App',
   components: {
-    AsideBar,
-    TopBar
+    Login
   }
 }
 </script>
@@ -35,16 +29,8 @@ html, body{
   color: #2c3e50;
 }
 
-.container{
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  margin-left: 16%;
-}
-
-.router{
-  margin-top: 50px;
-  width: 100%;
+.login{
+  width: 10px;
 }
 
 </style>

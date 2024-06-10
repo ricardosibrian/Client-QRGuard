@@ -86,8 +86,9 @@ export default {
 }
 
 h2 {
-  font-size: 1.5rem;
-  color: var(--primary-color);
+  color: var(--title-color);
+  font-size: 18px;
+  font-family: var(--primary-font);
   margin-bottom: 20px;
 }
 
@@ -98,6 +99,9 @@ h2 {
 label {
   display: block;
   margin-bottom: 5px;
+  font-size: 14px;
+  color: var(--title-color);
+  font-family: var(--primary-font);
 }
 
 select, input {
@@ -108,9 +112,35 @@ select, input {
   border-radius: 4px;
 }
 
+option{
+  color: var(--title-color);
+  font-size: 14px;
+  font-family: var(--primary-font);
+  border-color: var(--title-color);
+}
+
+option:focus {
+  outline-color: var(--primary-color);
+}
+
+select{
+  color: var(--title-color);
+  font-size: 14px;
+  font-family: var(--primary-font);
+  border-color: var(--title-color);
+}
+
+select:focus {
+  outline-color: var(--primary-color);
+}
+
 button {
   background-color: var(--primary-color);
+  background-color: var(--primary-color);
   color: white;
+  font-size: 14px;
+  font-family: var(--primary-font);
+  font-weight: 600;
   padding: 10px;
   border: none;
   border-radius: 4px;
@@ -119,12 +149,12 @@ button {
 }
 
 button:hover {
-  background-color: #4b80e2;
+  background-color: #1d3a94;
 }
-
 .note {
   margin-top: 10px;
-  font-size: 0.8rem;
+  font-size: 12px;
   color: var(--title-color);
+  font-family: var(--primary-font);
 }
 </style>

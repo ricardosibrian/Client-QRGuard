@@ -1,20 +1,14 @@
 <template>
   <div class="main-admin-vigilant">
     <div class="add-vigilant">
-      <h2>Agregar un nuevo vigilante</h2>
+      <h2>Registrar una entrada no asociada</h2>
       <form @submit.prevent="addVigilant">
-        <label for="email">Correo electrónico del nuevo vigilante</label>
-        <input type="email" id="email" v-model="newVigilantEmail" placeholder="Correo electrónico" required />
-        <button type="submit">Agregar vigilante</button>
+        <label for="text">¿Quién entra?</label>
+        <input type="text" id="entrada" v-model="newVigilantEmail" placeholder="Camión de aseo, policía, delivery..." required />
+        <label for="text">Motivo de la entrada</label>
+        <input type="text" id="motivo" v-model="newVigilantEmail" placeholder="Motivo de entrada" required />
+        <button type="submit">Registrar entrada</button>
       </form>
-    </div>
-    <div class="active-vigilants">
-      <h2>Vigilantes activos</h2>
-      <div class="vigilant-cards">
-        <div class="vigilant-card" v-for="vigilant in vigilants" :key="vigilant.email">
-          <CardAdmin :src="vigilant.src" :name="vigilant.name" :email="vigilant.email" @remove="removeVigilant(vigilant.email)" />
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -24,7 +18,7 @@ import CardAdmin from '../components/CardVigilante.vue';
 import vigilantImage from '../assets/vigilant.png';
 
 export default {
-  name: 'AdminVigilantView',
+  name: 'CreateEntryView',
   components: {
     CardAdmin
   },
@@ -131,30 +125,5 @@ input:focus {
   background-color: #1d3a94;
 }
 
-.active-vigilants {
-  margin-top: 20px;
-  max-width: 100%;
-}
-
-.active-vigilants h2 {
-  color: var(--title-color);
-  font-size: 18px;
-  font-family: var(--primary-font);
-  margin-bottom: 10px;
-}
-
-.vigilant-cards {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  gap: 20px;
-
-}
-
-.vigilant-card {
-  flex: 0 0 auto;
-}
 </style>
-
-
 

@@ -24,7 +24,7 @@ export default {
 <style>
 @import url('../styles.css');
 .card{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); 
     border-radius: 10px; 
     border: 1px solid transparent; 
@@ -34,10 +34,13 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    padding: 30px;
+    gap: 10px;
 }
 
 .card .qr-img{
-    width: 250px;
+  margin-top: 0;
+    width: 100%;
     height: 250px;
     border-radius: 5px;
 }
@@ -50,8 +53,12 @@ export default {
     font-size: var(--menu-items-size);
     font-family: var(--primary-font);
     padding: 8px 0px 8px 10px;
-    width: 250px;
+    width: 100%;
     font-weight: 600;
+}
+
+.buttonQR:hover {
+  background-color: #1d3a94;
 }
 
 

@@ -76,16 +76,18 @@ export default {
 
 .modal-content h3 {
   margin-bottom: 20px;
-  font-size: 20px;
-  color: #4a4a4a;
+  color: var(--title-color);
+  font-size: 18px;
+  font-family: var(--primary-font);
   text-align: left;
 }
 
 label {
   display: block;
   margin-bottom: 10px;
-  font-size: 16px;
-  color: #4a4a4a;
+  font-size: 14px;
+  color: var(--title-color);
+  font-family: var(--primary-font);
   text-align: left;
 }
 
@@ -95,11 +97,19 @@ input[type="email"] {
   margin-bottom: 20px;
   border: 1px solid #dcdcdc;
   border-radius: 5px;
+  color: var(--title-color);
+  font-size: 14px;
+  font-family: var(--primary-font);
+  border-color: var(--title-color);
+}
+
+input:focus {
+  outline-color: var(--primary-color);
 }
 
 .modal-actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   gap: 10px;
 }
 
@@ -111,13 +121,27 @@ button {
 }
 
 button[type="button"] {
-  background-color: #e0e0e0;
-  color: #4a4a4a;
+  background-color: var(--bg-color);
+  color: var(--title-color);
+  font-size: 14px;
+  font-family: var(--primary-font);
+  font-weight: 600;
+}
+
+button[type="button"]:hover {
+  background-color: #E0E1E5;  
 }
 
 button[type="submit"] {
   background-color: var(--primary-color);
   color: white;
+  font-size: 14px;
+  font-family: var(--primary-font);
+  font-weight: 600;
+}
+
+button[type="submit"]:hover {
+  background-color: #1d3a94;
 }
 </style>
 

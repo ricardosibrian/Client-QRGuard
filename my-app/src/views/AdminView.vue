@@ -1,8 +1,8 @@
 <template>
   <div class="main-admin">
-      <router-link to="/adminHouseView" class="card-link"><CardAdmin :src="house" msg="Administrar hogares"></CardAdmin></router-link>
-      <router-link to="/adminVigilantView" class="card-link"><CardAdmin :src="vigilant" msg="Administrar vigilantes"></CardAdmin></router-link>
-      <router-link to="/adminScanerView" class="card-link"><CardAdmin :src="scaner" msg="Administrar escáneres"></CardAdmin></router-link>
+      <router-link to="/mainView/adminHouseView" class="card-link"><CardAdmin :src="house" msg="Administrar hogares"></CardAdmin></router-link>
+      <router-link to="/mainView/adminVigilantView" class="card-link"><CardAdmin :src="vigilant" msg="Administrar vigilantes"></CardAdmin></router-link>
+      <router-link to="/mainView/adminScanerView" class="card-link"><CardAdmin :src="scaner" msg="Administrar escáneres"></CardAdmin></router-link>
   </div>
 </template>
 

@@ -21,4 +21,5 @@ export default {
 .main-entry{
   padding: 20px;
 }
+
 </style>

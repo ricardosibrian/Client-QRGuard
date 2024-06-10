@@ -1,6 +1,6 @@
 <template>
   <div class="entries-table-container">
-    <h2>Historial de entradas a mi hogar</h2>
+    <h3>Historial de entradas a mi hogar</h3>
     <div class="filter-container">
       <input type="text" placeholder="Buscar por nombre de visitante" v-model="searchQuery" />
       <div class="dropdown">
@@ -13,7 +13,8 @@
         </div>
       </div>
     </div>
-    <table class="entries-table">
+    <div class="table-wrapper">
+      <table class="entries-table">
       <thead>
         <tr>
           <th>Fecha/Hora de entrada</th>
@@ -31,6 +32,7 @@
         </tr>
       </tbody>
     </table>
+    </div>
   </div>
 </template>
 
@@ -45,7 +47,6 @@ export default {
         { id: 1, date: '02/03/2023 15:30:00', visitor: 'Carlos García', email: 'john.doe@gmail.com', entryType: 'Entrada única' },
         { id: 2, date: '02/03/2023 15:30:00', visitor: 'Carlos García', email: 'ricardo.lopez@gmail.com', entryType: 'Entrada única' },
         { id: 3, date: '02/03/2023 15:30:00', visitor: 'Carlos García', email: 'fernando.eguzizabal@gmail.com', entryType: 'Entrada única' },
-        // Agrega más entradas según sea necesario
       ],
     };
   },
@@ -71,17 +72,18 @@ export default {
 </script>
 
 <style scoped>
+@import url('../styles.css');
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
 .entries-table-container {
   background: #ffffff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #4a4a4a;
+  overflow-x: auto;
 }
 
 .filter-container {
@@ -97,6 +99,17 @@ input[type="text"] {
   border-radius: 5px;
 }
 
+.filter-container input{
+  color: var(--title-color);
+  font-size: 14px;
+  font-family: var(--primary-font);
+  border-color: var(--title-color);
+}
+
+.filter-container input:focus {
+  outline-color: var(--primary-color);
+}
+
 .dropdown {
   position: relative;
 }
@@ -104,10 +117,17 @@ input[type="text"] {
 .dropdown-button {
   background-color: var(--primary-color);
   color: white;
+  font-size: 14px;
+  font-family: var(--primary-font);
   padding: 10px 20px;
+  font-weight: 600;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.dropdown-button:hover {
+  background-color: #1d3a94;
 }
 
 .dropdown-menu {
@@ -127,6 +147,9 @@ input[type="text"] {
   background: none;
   border: none;
   cursor: pointer;
+  font-size: 14px;
+  font-family: var(--primary-font);
+  color: var(--title-color);
 }
 
 .dropdown-menu button:hover {
@@ -136,6 +159,8 @@ input[type="text"] {
 .entries-table {
   width: 100%;
   border-collapse: collapse;
+  color: var(--title-color);
+  font-family: var(--primary-font);
 }
 
 .entries-table th,
@@ -147,5 +172,33 @@ input[type="text"] {
 
 .entries-table th {
   background-color: #f9f9f9;
+  font-size: 14px;
+}
+
+.entries-table td {
+  font-size: 13px;
+}
+
+.entries-table-container h3{
+  color: var(--title-color);
+  font-size: 18px;
+  font-family: var(--primary-font);
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 900px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }
 </style>

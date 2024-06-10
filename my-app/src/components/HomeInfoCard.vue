@@ -74,7 +74,7 @@ export default {
   justify-content: space-evenly;
   padding: 20px 0px 20px 0px;
   gap: 20px;
-  position: relative; /* Añadido */
+  position: relative; 
 }
 
 .group-merge{
@@ -154,11 +154,10 @@ export default {
   flex-direction: column;
 }
 
-/* Estilos para el botón de editar */
 .edit-button {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  top: 10px; 
+  right: 10px; 
   background: none;
   border: none;
   cursor: pointer;
@@ -168,6 +167,12 @@ export default {
 .edit-button img {
   width: 24px;
   height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .group-merge{
+    flex-direction: column;
+  }
 }
 </style>
 

@@ -1,6 +1,7 @@
 <template>
   <div class="main-admin-house">
-    <h2>Módulo de administración de hogares</h2>
+    <div class="main-card">
+    <h2>Registro de hogares</h2>
     <div class="table-container">
       <table>
         <thead>
@@ -16,11 +17,12 @@
             <td>{{ house.numeroCasa }}</td>
             <td>{{ house.encargado }}</td>
             <td>{{ house.habitantes }}</td>
-            <td><router-link to="/adminHouseDetailView" class="card-link"><a>Administrar</a></router-link></td>
+            <td><router-link to="/mainView/adminHouseDetailView" class="admin-home"><button>Administrar</button></router-link></td>
           </tr>
         </tbody>
       </table>
     </div>
+  </div>
   </div>
 </template>
 
@@ -54,12 +56,26 @@ export default {
 <style scoped>
 @import url('../styles.css');
 
-.main-admin-house {
+.main-admin-house{
+  padding: 20px;
+  margin-top: 20px;
+}
+.main-card{
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
 
 .table-container {
   margin-top: 20px;
+  overflow-x: auto;
+}
+
+h2{
+  color: var(--title-color);
+  font-size: 18px;
+  font-family: var(--primary-font);
 }
 
 table {
@@ -72,25 +88,38 @@ thead {
   background-color: #f4f4f4;
 }
 
-th, td {
-  padding: 10px;
+.table-container{
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--title-color);
+  font-family: var(--primary-font);
+}
+.table-container th,
+.table-container td {
+  padding: 15px;
   text-align: left;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-th {
-  font-weight: bold;
-}
-
-tbody tr:nth-child(even) {
+.table-container th {
   background-color: #f9f9f9;
+  font-size: 14px;
 }
 
-a {
-  color: #1e90ff;
-  text-decoration: none;
+.table-container td {
+  font-size: 13px;
 }
 
-a:hover {
-  text-decoration: underline;
+.admin-home {
+  background-color: var(--bg-color);
+  color: var(--title-color);
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-home:hover {
+  background-color: #E0E1E5;  
 }
 </style>

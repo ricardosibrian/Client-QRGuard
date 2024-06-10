@@ -24,7 +24,7 @@ export default {
   border-radius: 10px; 
   border: 1px solid transparent; 
   background-color: #ffffff;
-  gap: 20px;
+  gap: 10px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); 
   margin-bottom: 20px;
   padding: 20px;
@@ -37,8 +37,8 @@ export default {
 
 .card-title {
   color: var(--title-color);
+  font-size: 18px;
   font-family: var(--primary-font);
-  font-size: var(--title-size2);
 }
 
 .card-email {
@@ -48,16 +48,19 @@ export default {
 
 button {
   background-color: var(--primary-color);
-  color: var(--white-color);
-  padding: 5px 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    font-family: var(--primary-font);
+    font-weight: 600;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 button:hover {
-  background-color: #4b80e2;
+  background-color: #1d3a94;
 }
 </style>
 
